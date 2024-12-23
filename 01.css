@@ -1,0 +1,100 @@
+*{
+		box-sizing: border-box;
+}
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Courier New', 'Courier', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: linear-gradient(30deg, rgba(69,60,162,255) 0%, rgba(78,104,175,255) 25%, rgba(83,128,182,255) 50%, rgba(92,167,194,255) 80%, rgba(98,197,203,255) 100%);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container{
+	position: relative;
+	height: 100px;
+	width:200px;
+}
+
+.one-diagonal {
+	position: absolute;
+	height: 40px;
+	width:20px;
+	background-color: white;
+	top: -50px;
+	left:-15px;
+	transform: rotate(50deg);
+	border-radius: 4px;
+}
+
+.one-vertical {
+	position: absolute;
+	height:100px;
+	width:25px;
+	background-color:white;
+	top:-50px;
+	left: 0px;
+	z-index:2;
+	border-radius: 5px;
+}
+
+.first-zero, .second-zero{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	background-color: transparent;
+	border: 24px solid white;
+	top:-50px;
+}
+
+.first-zero{
+	z-index: 1;
+	left: 17px;
+}
+
+.second-zero{
+	left: 100px;
+	z-index: 0;
+}
+	
+.number{
+	box-shadow: rgba(0, 0, 0, .2) 0px 0px 13px 0px;
+}
+
+.text{
+	color: white;
+}
+
+.large{
+	position: absolute;
+	font-size: 83.5px;
+	top: 40px;
+	font-weight: 600;
+}
+
+.small{
+	position:absolute;
+	font-size: 25px;
+	top: 115px;
+	font-weight: 600;
+}
