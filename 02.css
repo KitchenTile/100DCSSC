@@ -1,0 +1,138 @@
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #3FAF82;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+span{
+	position:absolute;
+  top: -4px;
+  left: 0;
+	width: 80px;
+	height:8px;
+	background-color:white;
+	border-radius: 4px;
+	box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, .4);
+	cursor: pointer;
+  transform: translateY(24px);
+}
+
+span:nth-child(1){
+	top: -22px;
+  animation: top-bar-animation-inactive 0.5s ease-in-out;
+}
+
+span:nth-child(2){
+  animation: middle-bar-animation-inactive .25s ease-in-out;
+}
+
+span:nth-child(3){
+	top: 14px;
+  animation: bottom-bar-animation-inactive .5s ease-in-out;
+}
+
+span.animate:nth-child(2){
+  animation: middle-bar-animation-active 0.35s forwards;
+}
+
+span.animate:nth-child(1){
+  animation: top-bar-animation-active 0.5s forwards;
+}
+
+span.animate:nth-child(3){
+  animation: bottom-bar-animation-active 0.5s forwards;
+}
+
+.container{
+  position: relative;
+  top:0;
+  left: 0;
+  width:80px;
+  height:50px;
+  background-color: transparent;
+}
+
+.container.init span{
+  animation: none !important;
+}
+
+@keyframes top-bar-animation-active{
+  50%{
+    transform: translateY(42px)
+  }
+  100%{
+    transform:translateY(42px) rotate(45deg)
+  }
+}
+
+@keyframes bottom-bar-animation-active{
+  50%{
+    transform: translateY(6px)
+  }
+  100%{
+    transform:translateY(6px) rotate(135deg);
+  }
+}
+
+@keyframes middle-bar-animation-active{
+  100%{
+    transform: scale(0%)
+  }
+}
+
+@keyframes top-bar-animation-inactive{
+   0%{
+    transform: translateY(42px) rotate(45deg)
+  }
+  50%{
+    transform: translateY(42px) rotate(0deg)
+  }
+  100%{
+    transform:translateY(24px) rotate(0deg)
+  }
+}
+
+@keyframes bottom-bar-animation-inactive{
+  0%{
+    transform:translateY(6px) rotate(135deg);
+  }
+  50%{
+    transform: translateY(6px) rotate(0deg);
+  }
+  100%{
+    transform:translateY(24px) rotate(0deg);
+  }
+}
+
+@keyframes middle-bar-animation-inactive{
+  0%{
+    opacity: 0;
+  }
+  99%{
+    opacity:0;
+  }
+  100%{
+    transform: scale(100%) translateY(24px);
+      opacity: 1;
+  }
+}
