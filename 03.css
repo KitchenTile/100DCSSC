@@ -1,0 +1,159 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #272C34;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container{
+	position: relative;
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+	overflow:hidden;
+	animation: fadeout 2.5s infinite;
+}
+
+#ground{
+	position: absolute;
+	height: 31.1%;
+	width:100%;
+	background-color: #F0DE75;
+	bottom: 0%;
+	
+}
+
+#sky{
+	position:absolute;
+	background-color: #7DDFFC;
+	height: 68.9%;
+	width: 100%;
+	top: 0;
+}
+
+#pyramid{
+	position: absolute;
+	top: 67px;
+	left:19.5%;
+	background-color: transparent;
+	z-index: 2;
+}
+
+#pyramid-left{
+		animation: pyramid-color-change 2.5s infinite cubic-bezier(.4,0,.49,1);
+}
+
+#pyramid-right{
+		animation: pyramid-color-change 2.5s infinite cubic-bezier(.4,0,.49,1) reverse;
+}
+
+#sun{
+	position: absolute;
+	width: 34px;
+	height:34px;
+	top:7px;
+	left: 73px;
+	background-color:yellow;
+	border-radius: 50%;
+	z-index: 2;
+	transform-origin: 50% 400%;
+	animation: sun-movement 2.5s infinite cubic-bezier(.4,0,.49,1);
+}
+
+	#shadow {
+		position: absolute;
+		z-index: 2;
+		top: 124px;
+		left: -80px;
+		height: 30px;
+		width: 360px;
+		background: rgba(0,0,0,0.2);
+		transform-origin: 50% 0%;
+	  clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+		animation: shadow 2.5s cubic-bezier(.4,0,.49,1) infinite;
+	}
+
+@keyframes sun-movement {
+  0% {
+		transform: rotate(-70deg);
+		background-color: #F57209;
+	}
+  30% {
+		transform: rotate(-28deg);
+		background-color: #FFEF00;
+	}
+	60% {
+		background-color: #FFEF00;
+	}
+  100% { 
+		transform: rotate(70deg);
+		background-color: #F57209;
+	}
+}
+
+@keyframes pyramid-color-change{
+
+	30%{
+		fill: #F4F4F4
+	}
+	70%{
+		fill: #DDDADA
+	}
+}
+
+@keyframes fadeout{
+	60%{
+		opacity: 1
+	}
+	90%{
+		opacity: 0
+	}
+}
+
+@keyframes shadow {
+  0% {
+		transform: scaleY(0);
+	  clip-path: polygon(115px 0%, 231px 0%, 100% 100%);
+  }
+	
+	30% {
+		transform: scaleY(1);
+	  clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+	}
+	
+	55% {
+		transform: scaleY(.4);
+	}
+
+	75% {
+		transform: scaleY(1);
+	}
+
+  100% {
+		transform: scaleY(0);
+	  clip-path: polygon(115px 0%, 231px 0%, 0% 100%);
+  }
+}
