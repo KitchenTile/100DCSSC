@@ -1,0 +1,77 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #42A7A1;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container{
+	position:relative;
+	width: 280px;
+	height: 220px;
+	background: white;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 10px 10px 15px rgba(0,0,0,.3)
+}
+
+.header{
+	display:flex;
+	height:60px;
+	width: 100%;
+	background: #F1BA64;
+	justify-content: space-between;
+	color:white;
+}
+
+.text-right{
+	display: flex;
+	width: 40%;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 15px;
+	padding-top: 12px;
+}
+
+.text-left{
+	  display: flex;
+    width: 60%;
+    padding-left: 15px;
+    padding-top: 12px;
+    flex-direction: column;
+    justify-content: flex-start;
+		gap:3px;
+}
+
+.header-h1{
+	font-size:14px;
+	font-weight: 600;
+}
+
+.header-p{
+	font-size: 11px;
+  font-weight: 400;
+}
