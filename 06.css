@@ -46,12 +46,25 @@
 .picture-buttons-container{
 	grid-column: 1 / 6;
 	background: white;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: center;
+}
+
+.text-container{
+	display:flex;
+	flex-direction: column;
+	text-align: center;
+	color: #786450;
+	transform: translateY(-20px);
 }
 
 .image{
 	display:flex;
 	justify-content: center;
 	height:100px;
+	cursor:pointer;
 }
 
 .pfp{
@@ -72,9 +85,9 @@
 		height: 76px;
 		background: transparent;
 		border: 1px solid;
-		border-color: green green green transparent;
+		border-color: #786450 #786450 #786450 transparent;
 		border-radius: 100%;
-		transition: all 1s linear;
+		transition: all 1s ease-in-out;
 
 	}
 	
@@ -90,9 +103,9 @@
 		height: 82px;
 		background: transparent;
 		border: 1px solid;
-		border-color: green transparent green green;
+		border-color: #786450 transparent #786450 #786450;
 		border-radius: 100%;
-		transition: all 1s linear;
+		transition: all 1s ease-in-out;
 	}
 	
 		&:hover:before{
@@ -107,6 +120,31 @@
 #pfp{
 	position: absolute;
 	border-radius: 100%;
+}
+
+.button-container{
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+	transform: translateY(-15px);
+
+}
+
+button{
+	height: 30px;
+	width:120px;
+	border-radius: 15px;
+	border: 1px solid #786450;
+	background: transparent;
+	font-weight: 600;
+	font-size:12px;
+	cursor:pointer;
+	transition: all 0.4s ease;
+	
+	&:hover{
+		background: #786450;
+		color:white;
+	}
 }
 
 
@@ -137,7 +175,12 @@
 	font-size: 18px;
 }
 
-.stats span:nth-child(2){
+.text-container span:nth-child(1){
+	font-weight:600;
+	font-size: 15px;
+}
+
+.stats span:nth-child(2),.text-container span:nth-child(2){
 	font-size: 12px;
 }
 
