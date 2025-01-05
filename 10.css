@@ -59,11 +59,59 @@
 	stroke-width: 3;
 	fill: none;
 	stroke-dasharray: 625;
-	animation: spin 2s infinite linear;
+	animation: spin 4s infinite linear;
 }
-@keyframes spin{
-  0% {  stroke-dashoffset: -625; }
-  50% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: 625; }
 
+.content{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	color: white;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	width:150px;
+	
+	& span:nth-child(1){
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	& span:nth-child(2){
+		font-size: 43px;
+		font-weight: 600;
+	}
+}
+
+.heart-beat{
+	display: flex;
+	gap: 7px;
+	font-size: 14px;
+	justify-content:center;
+	text-transform: uppercase;
+	
+		& span:nth-child(1){
+		color: #F85B5B;
+		margin-top: 3px;
+		font-size: 10px;
+		animation: beat 1s cubic-bezier(0, 1.32, 0.878, 1.403)
+ infinite;
+	}
+}
+
+@keyframes spin{
+  0% {  stroke-dashoffset: 625; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -625; }
+
+}
+
+@keyframes beat{
+	0%{
+		transform: scale(1)
+	}
+	100%{
+		transform: scale(1.2);
+	}
 }
