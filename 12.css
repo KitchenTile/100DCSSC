@@ -1,0 +1,128 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #4CB6DE;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	box-sizing: border-box;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%,0);
+	width: 100%;
+	padding: 0 30px;
+}
+
+p{
+	margin: 20px 0;
+}
+
+.text{
+	font-size: 25px;
+	color: white;
+	line-height: 35px;
+	
+	&:before{
+		position: absolute; 
+		content: "”";
+		top: 78px;
+		left: 7px;
+		color: #6AC2E3;
+		font-size: 250px;
+		font-family: arial;
+		z-index: -1;
+	}
+	
+	
+	& #author{
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 28px;
+	}
+	
+	& .accent{
+		background: #286F8A;
+		padding: 0 5px 5px 8px;
+    cursor: pointer;
+    margin-right: 8px;
+		
+		&:hover .definition,
+		&:focus .definition {
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		
+		& .definition{
+			display: block;
+			position: absolute;
+			width: 300px;
+			background: #286F8A;
+			top: -55px;
+			left: 45px;
+			transform: translateY(-30px);
+			cursor: text;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s ease-out;
+
+			&:before{
+				content: "";
+				position: absolute;
+				bottom: -4px;
+				left: 50%;
+				border: 5px solid;
+				transform: rotate(45deg);
+				border-color: transparent #286F8A #286F8A transparent;
+				cursor: pointer;
+			}
+			
+			& .header{
+				box-sizing: border-box;
+				display: block;
+				width: 100%;
+				background: white;
+				color: #286F8A;
+				padding: 8px 0 10px 20px;
+				font-size: 16px;
+				line-height: 16px;
+				
+				& .fa{
+					padding-left: 7px;
+					transition: transform 0.3s linear;
+					cursor: pointer;
+					
+					&:hover{
+						transform: scale(1.2);
+					}
+				}
+			}
+			
+			& .content{
+				display: block;
+				font-size: 16px;
+				padding: 13px 17px;
+				line-height: 24px;
+			}
+		}
+	}
+	
+}
