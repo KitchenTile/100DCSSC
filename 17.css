@@ -1,0 +1,128 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	z-index:2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.line{
+	position: absolute;
+	height: 200%;
+	width: 3px;
+	left: -200px;
+	top: -50%;
+	background: black;
+	transform: rotate(-45deg);
+	
+	&:before{
+		position: absolute;
+		content: "";
+		left: 40px;
+		height: 200%;
+		width: 3px;
+		background: black;
+	}
+	&:after{
+		position: absolute;
+		content: "";
+		height: 200%;
+		width: 3px;
+		background: black;
+		left: 20px;
+	}
+	
+	&:nth-child(2){
+		left: -120px;
+	}
+	&:nth-child(3){
+		left: -40px;
+	}
+	&:nth-child(4){
+		left: 40px;
+	}
+	&:nth-child(5){
+		left: 120px;
+	}
+	&:nth-child(6){
+		left: 200px;
+	}
+	&:nth-child(7){
+		left: 280px;
+	}
+	&:nth-child(8){
+		left: 360px;
+	}
+	&:nth-child(9){
+		left: 440px;
+	}
+	&:nth-child(10){
+		left: 520px;
+	}
+}
+
+.container{
+	position: relative;
+	height: 260px;
+	width: 260px;
+	background: #353535;
+	box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+}
+
+.shape{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 140px;
+	width: 160px;
+	
+	& .middle{
+		fill: #ccc;
+		transition: all 0.5s ease-in-out;
+	}
+
+	& .light{
+		 fill: #eee;
+		transition: all 0.5s ease-in-out;
+	}
+
+	& .dark{
+		fill: #aaa;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	&:hover .middle{
+		fill: #eee;
+	}
+	&:hover .light{
+		fill: #aaa;
+	}
+	&:hover .dark{
+		fill: #ccc;
+	}
+}
