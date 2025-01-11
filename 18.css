@@ -1,0 +1,127 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.green{
+	height: 200px;
+	width: 400px;
+	background: #37D493;
+	transform-origin:50% 25%;
+	animation: green 3s linear(0, 0.481 2%, 0.768 3.5%, 0.866 4.2%, 0.937 4.9%, 0.979 5.6%, 0.988 5.9%, 0.99 6.2%, 0.988 6.5%, 0.979 6.8%, 0.938 7.5%, 0.868 8.2%, 0.771 8.9%, 0.469 10.5%, -0.306 13.8%, -0.61 15.3%, -0.737 16.1%, -0.832 16.9%, -0.893 17.7%, -0.909 18.1%, -0.915 18.4%, -0.916 18.7%, -0.909 19.1%, -0.875 19.8%, -0.814 20.5%, -0.729 21.2%, -0.461 22.8%, 0.23 26.1%, 0.501 27.6%, 0.614 28.4%, 0.7 29.2%, 0.755 30%, 0.771 30.4%, 0.779 30.8%, 0.779 31.1%, 0.775 31.4%, 0.749 32.1%, 0.7 32.8%, 0.631 33.5%, 0.427 35%, -0.152 38.4%, -0.372 39.9%, -0.464 40.7%, -0.534 41.5%, -0.579 42.3%, -0.592 42.7%, -0.599 43.1%, -0.601 43.4%, -0.598 43.7%, -0.58 44.4%, -0.544 45.1%, -0.492 45.8%, -0.34 47.3%, 0.074 50.6%, 0.235 52.1%, 0.303 52.9%, 0.354 53.7%, 0.389 54.5%, 0.405 55.3%, 0.407 55.6%, 0.406 55.9%, 0.396 56.6%, 0.377 57.2%, 0.345 57.9%, 0.249 59.4%, -0.008 62.6%, -0.112 64.1%, -0.19 65.7%, -0.213 66.5%, -0.226 67.3%, -0.228 67.9%, -0.224 68.6%, -0.215 69.2%, -0.199 69.9%, -0.152 71.3%, -0.023 74.4%, 0.027 75.8%, 0.069 77.4%, 0.08 78.1%, 0.088 78.9%, 0.091 79.5%, 0.091 80.1%, 0.088 80.7%, 0.083 81.4%, 0.067 82.7%, 0.01 86.6%, -0.004 88%, -0.012 89.3%, -0.015 90.4%, -0.015 91.5%, -0.002 96.6%, 0) infinite;
+}
+
+.gray{
+	height: 200px;
+	width: 400px;
+	background: #444;
+		animation: gray 3s linear(0, 0.481 2%, 0.768 3.5%, 0.866 4.2%, 0.937 4.9%, 0.979 5.6%, 0.988 5.9%, 0.99 6.2%, 0.988 6.5%, 0.979 6.8%, 0.938 7.5%, 0.868 8.2%, 0.771 8.9%, 0.469 10.5%, -0.306 13.8%, -0.61 15.3%, -0.737 16.1%, -0.832 16.9%, -0.893 17.7%, -0.909 18.1%, -0.915 18.4%, -0.916 18.7%, -0.909 19.1%, -0.875 19.8%, -0.814 20.5%, -0.729 21.2%, -0.461 22.8%, 0.23 26.1%, 0.501 27.6%, 0.614 28.4%, 0.7 29.2%, 0.755 30%, 0.771 30.4%, 0.779 30.8%, 0.779 31.1%, 0.775 31.4%, 0.749 32.1%, 0.7 32.8%, 0.631 33.5%, 0.427 35%, -0.152 38.4%, -0.372 39.9%, -0.464 40.7%, -0.534 41.5%, -0.579 42.3%, -0.592 42.7%, -0.599 43.1%, -0.601 43.4%, -0.598 43.7%, -0.58 44.4%, -0.544 45.1%, -0.492 45.8%, -0.34 47.3%, 0.074 50.6%, 0.235 52.1%, 0.303 52.9%, 0.354 53.7%, 0.389 54.5%, 0.405 55.3%, 0.407 55.6%, 0.406 55.9%, 0.396 56.6%, 0.377 57.2%, 0.345 57.9%, 0.249 59.4%, -0.008 62.6%, -0.112 64.1%, -0.19 65.7%, -0.213 66.5%, -0.226 67.3%, -0.228 67.9%, -0.224 68.6%, -0.215 69.2%, -0.199 69.9%, -0.152 71.3%, -0.023 74.4%, 0.027 75.8%, 0.069 77.4%, 0.08 78.1%, 0.088 78.9%, 0.091 79.5%, 0.091 80.1%, 0.088 80.7%, 0.083 81.4%, 0.067 82.7%, 0.01 86.6%, -0.004 88%, -0.012 89.3%, -0.015 90.4%, -0.015 91.5%, -0.002 96.6%, 0) infinite;
+}
+
+.middle{
+	position: absolute;
+	top: 0;
+	left: -10px;
+	height: 400px;
+	width: 420px;
+	transform-style: preserve-3d;
+	-webkit-animation: elastic 5s ease-in-out infinite;
+	animation: bounce 5s ease-in-out infinite;
+}
+
+.middle-gray, .middle-green{
+    position: absolute;
+    width: 420px;
+    height: 400px;
+    background: #444;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    z-index: 2;
+    transform: rotateX(0);
+}
+
+.middle-green{
+   z-index: 1;
+   transform: rotateX(180deg);
+	background: #37D493;
+}
+
+@keyframes bounce{
+	0% {
+    transform: rotateX(90deg);
+}
+15% {
+    transform: rotateX(150deg);
+}
+20% {
+    transform: rotateX(50deg);
+}
+25% {
+    transform: rotateX(120deg);
+}
+30% {
+    transform: rotateX(70deg);
+}
+35% {
+    transform: rotateX(100deg);
+}
+40% {
+    transform: rotateX(83deg);
+}
+45% {
+    transform: rotateX(93deg);
+}
+50% {
+    transform: rotateX(90deg);
+}
+65% {
+    transform: rotateX(30deg);
+}
+70% {
+    transform: rotateX(130deg);
+}
+75% {
+    transform: rotateX(60deg);
+}
+80% {
+    transform: rotateX(110deg);
+}
+85% {
+    transform: rotateX(80deg);
+}
+90% {
+    transform: rotateX(97deg);
+}
+95% {
+    transform: rotateX(87deg);
+}
+100% {
+    transform: rotateX(90deg);
+}
+}
