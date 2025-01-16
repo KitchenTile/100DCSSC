@@ -1,0 +1,142 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+    background: linear-gradient(to bottom, #28404E 0%, #1c2e38 100%);  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.text-container{
+	color: white;
+	position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	font-size: 22px;
+	text-align: center;
+	
+	& p{
+		margin-bottom: 0;
+		font-size: 16px;
+	}
+}
+
+.data-container{
+	position: relative;
+	height: 70%;
+	top: 120px;
+	
+	& svg.background{
+		stroke-dasharray: 315px;
+		stroke-dashoffset: 0px;
+		stroke: #1B2A33;
+	}
+	
+		
+	& svg{
+		position: absolute;
+		stroke: #5CE1EC;
+		fill: none;
+		stroke-width: 6px;
+		top: 0px;
+		left: 50%;
+		transform: translateX(-50%) rotate(-90deg);
+		width:100%;
+		height: 100%;
+		stroke-dasharray: 217px;
+		stroke-linecap: round;
+	}
+	
+	& svg.kcal-svg{
+		stroke: #27E1AE;
+		stroke-width: 10px;
+		stroke-dasharray: 315px;
+		stroke-dashoffset: 315px;
+		animation: steps 2s ease-in-out forwards;
+		}
+	
+	& .kcal > .background{
+		stroke-width: 10px;
+	}
+
+}
+
+.kcal, .steps, .km{
+	position: absolute;
+	width:110px;
+	height: 110px;
+}
+
+.kcal{
+	left:50%;
+	transform: translateX(-50%);
+}
+
+.steps, .km{
+	width: 80px;
+	height: 80px;
+}
+
+.steps{
+	left: 25%;
+	top: 50%;
+	
+	& > svg.steps-svg{
+		stroke-dashoffset: 217px;
+		animation: steps 2s ease-in-out forwards;
+	}
+}
+
+.km{
+	left: 55%;
+	top: 50%;
+	
+		& > svg.km-svg{
+		stroke-dashoffset: 217px;
+		animation: km 2s ease-in-out forwards;
+	}
+}
+
+.text{
+	color: #648192;
+	text-align: center;
+	font-size: 14px;
+	
+	& b{
+		color: white;
+		font-size: 18px;
+	}
+}
+
+@keyframes steps{
+	100%{
+			stroke-dashoffset: 80px;
+	}
+}
+
+@keyframes km{
+	100%{
+			stroke-dashoffset: 150px;
+	}
+}
