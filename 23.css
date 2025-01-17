@@ -1,0 +1,233 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #E16D6C;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.line{
+		position: absolute;
+		display: inherit;
+		background: white;
+
+
+		
+		&:nth-child(1){
+			height: 4px;
+			width: 24px;			
+			top: 41%;
+			left: 74.5%;
+			transform: translateY(50%) scaleX(0);
+			transform-origin: 100%;
+			
+			animation: scale-sides 1s linear 1.5s forwards;
+		}
+		&:nth-child(2){
+			height: 4px;
+			width: 24px;
+			
+			top: 57%;
+			left: 74.5%;
+			transform: translateY(50%) scaleX(0);
+			transform-origin: 100%;
+			
+			animation: scale-sides 1s linear 1.5s forwards;
+
+		}
+		&:nth-child(3){
+			height: 4px;
+			width: 24px;
+			
+			top: 57%;
+			left: 19.5%;
+			
+			transform: translateY(50%) scaleX(0);
+			transform-origin: 0%;
+			
+			animation: scale-sides 1s linear 1.5s forwards;
+		}
+		&:nth-child(4){
+			height: 4px;
+			width: 24px;
+			
+			top: 41%;
+			left: 19.5%;
+			transform: translateY(50%) scaleX(0);
+			transform-origin: 0%;
+			
+			animation: scale-sides 1s linear 1.5s forwards;
+		}
+		
+		&:nth-child(5){
+			display: inherit;
+			position: absolute;
+			height: 61px;
+			width: 4px;
+			transform: translate(-50%, -50%) scaleY(0);
+			animation: scale-height 1s linear 1.5s forwards;
+			
+			top: 50%;
+			left: 80%;
+		}
+		&:nth-child(6){
+			height: 61px;
+			width: 4px;
+			
+			top: 50%;
+			left: 20%;
+			transform: translate(-50%, -50%) scaleY(0);
+			animation: scale-height 1s linear 1.5s forwards;
+		}
+		
+		&:nth-child(7){
+			height: 4px;
+			width: 118px;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) scaleX(0);
+			transform-origin: 0%;
+			animation: scale-middle 1.1s linear 0.5s forwards;
+		}
+		
+		&:nth-child(8){
+			height: 4px;
+			width: 118px;
+			top: 50%;
+			left: 20.5%;
+			transform: translateY(-50%) scaleX(0);
+			transform-origin: 100%;
+			animation: scale-middle-left 1.1s linear 0.5s forwards;
+
+		}
+		
+	}
+	
+.text-container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+	
+	& p{
+		transform: translate(20% ,-80%);
+			font-size: 24px;
+		opacity: 0;
+		animation: text-slide 0.5s linear 2s forwards;
+		
+		&#top{
+			transform: translate(-20% ,80%);
+		animation: text-slide-top 0.5s linear 2s forwards;
+		}
+	}
+	
+	& h1{
+		transform: scaleY(0);
+		animation: scale 1s linear 1.5s forwards;
+		font-size: 40px;
+	}
+}
+
+.circle{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 40px;
+	height: 40px;
+	background: white;
+	border-radius: 50%;
+	
+	animation: circle 0.5s ease-in-out forwards;
+}
+
+
+
+@keyframes scale{
+	100%{
+		transform: scaleY(1);
+	}
+}
+
+@keyframes text-slide{
+	100%{
+		transform: translate(0, -80%);
+		opacity: 1;
+	}
+}
+
+@keyframes text-slide-top{
+	100%{
+		transform: translate(0, 80%);
+		opacity: 1;
+	}
+}
+
+@keyframes scale-sides{
+	50%{
+		transform: translateY(50%) scaleX(0);
+	}
+	100%{
+		transform: translateY(50%) scaleX(1);
+	}
+}
+
+@keyframes scale-height{
+	50%, 100%{
+		transform: translate(-50%, -50%) scaleY(1);
+	}
+}
+
+
+@keyframes scale-middle{
+	50%{
+		transform: translateY(-50%) scaleX(1);
+		transform-origin: 0;
+	}
+	51%{
+			transform-origin: 100%;
+	}
+	100%{
+		transform-origin: 100%;
+		transform: translateY(-50%) scaleX(0);
+	}
+}
+
+@keyframes scale-middle-left{
+	50%{
+		transform: translateY(-50%) scaleX(1);
+		transform-origin: 100%;
+	}
+	51%{
+			transform-origin: 0%;
+	}
+	100%{
+		transform-origin: 0%;
+		transform: translateY(-50%) scaleX(0);
+	}
+}
+
+@keyframes circle{
+	50%{
+			transform: translate(-50%, -50%) scale(1.4);
+	}
+	100%{
+			transform: translate(-50%, -50%) scale(0);
+	}
+}
