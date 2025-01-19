@@ -1,0 +1,148 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#visual{
+	z-index: -1;
+}
+.pin-container{
+	position: absolute;
+	top: 200px;
+	left: 150px;
+	
+	
+	&::before{
+		content: "";
+		position: absolute;
+		top: 78px;
+		left: 16px;
+		height: 6px;
+		width: 16px;
+		border-radius: 50%;
+		background: rgba(0,0,0,0.3);
+		animation: enlarge 2s linear infinite;
+	}
+}
+
+.pin{
+	height: 72px;
+	width: 48px;
+	position: absolute;
+	fill: #FFCC30;
+	cursor: pointer;
+	transform: rotateY(0deg);
+	opacity: 1;
+	animation: bounce 2s linear infinite;
+	transition: all 1s linear;
+	
+	&.active{
+		transform: rotateY(100deg);
+		opacity: 0;
+	}
+}
+
+.card{
+	z-index: 10;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(60deg);
+	width: 250px;
+	height: 200px;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 8px 10px 8px rgba(0,0,0, 0.2);
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s ease-out 0.4s;
+	
+	&.active{
+		transform: translate(-50%, -50%) rotateY(0deg);
+		opacity: 1;
+		visibility: visible;
+	}
+	
+	& img{
+		width: inherit;
+	}
+	
+	& .text-container{
+		text-align: center;
+		width: 100%;
+		padding-top: 22px;
+		
+		& p{
+			font-size: 12px;
+			margin: 5px;
+		}
+		
+		& h1{
+			font-size: 14px;
+			margin: 0;
+		}
+	}
+			
+	& .footer{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		margin-block: 12px;
+		text-align: center;
+		
+		&::before{
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 0px;
+			height: 22px;
+			width: 1px;
+			background: #1F8DE4;
+		}
+			
+		& button{
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			width: 110px;
+			height: 100%;
+			border: none;
+			background: transparent;
+			color: #1F8DE4;
+			font-size: 12px;
+			cursor: pointer;
+		}
+	}
+}
+
+@keyframes bounce{
+	50%{
+		transform: translateY(4px) rotateY(0deg);
+	}
+}
+
+@keyframes enlarge{
+	50%{
+		transform: scale(0.8);
+	}
+}
