@@ -1,0 +1,134 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #C7D6E1;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.card{
+	position: absolute;
+	height: 150px;
+	width: 240px;
+	background: white;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 3px 3px 8px rgba(0,0,0, 0.1);
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(2);
+	transition: all 0.7s ease-in-out;
+
+	&.active{
+			animation: fade-in 0.7s ease-in-out 0.7s forwards;
+	}
+	
+	&.inactive{
+		animation: fade-out 0.7s ease-in-out forwards;
+	}
+}
+
+
+.text-container{
+	display: block;
+	padding-top: 15px;
+	color: #616E7D;	
+	
+	& .title{
+	font-size: 16px;
+}
+	& p{
+		font-size: 12px;
+		padding: 0 10%;
+	}
+}
+
+button{
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	background: #3CA7FB;
+	appearance: none;
+	border:none;
+	height: 40px;
+	color: white;
+	font-size: 12px;
+	cursor: pointer;
+	transition: all 0.3s;
+	
+	&:hover{
+		background: #2196F3;
+	}
+}
+
+#index{
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	font-weight: 600;
+	font-size: 14px;
+	color: white;
+	z-index: 1;
+	
+	&::after{
+		content: "";
+		position: absolute;
+		border: 30px solid;
+		border-color: transparent #8391A1 transparent transparent;
+		transform: rotate(135deg);
+		top: -35px;
+		right: -38px;
+		z-index: -1;
+	}
+}
+
+@keyframes fade-in{
+	0%{
+		visibility: hidden;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.8);
+	}
+	100%{
+		visibility: visible;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+@keyframes fade-out{
+	100%{
+		visibility: hidden;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(1.2);
+	}
+	0%{
+		visibility: visible;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
