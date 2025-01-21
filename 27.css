@@ -1,0 +1,149 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+*{
+		box-sizing: border-box;
+}
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+	background: rgb(240,158,28);
+	background: linear-gradient(52deg, rgba(240,158,28,1) 0%, rgba(255,205,17,1) 100%);
+
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container{
+	width: 240px;
+	height: 280px;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+	// box-sizing: border-box;
+	display: block;
+}
+
+.top{
+	padding: 20px 0;
+	margin: 0 30px;
+	text-align: center;
+	border-bottom: 1px solid #D4DCE0;
+	
+	& h1{
+		margin: 0;
+		font-size: 20px;
+		line-height: 30px;
+		color: #7d8285;
+	}
+	& p{
+		margin: 0;
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+
+.list-container{
+	margin: 0 30px;
+	height: 191px;
+	padding-bottom: 20px;
+	
+	& .todo{
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-evenly;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+li{
+	position: relative;
+	// display: flex;
+	// width: 100%;
+	// align-items: center;
+}
+
+label{
+	font-size: 14px;
+}
+
+.checkbox{
+	appearance: none;
+}
+
+.check{
+	position: absolute;
+	top: 2px;
+	right: 0;
+	content: "";
+	width: 12px;
+	height: 12px;
+	border: 1px solid black;
+	border-radius: 100%;
+	left: none;
+	right: 0;
+	
+	transition: all .5s ease-in-out .5s;
+}
+
+svg{
+	height: 10px;
+	width: 15px;
+	position: absolute;
+	top: 2px;
+	right: 0;
+	stroke: #C8D4D9;
+	fill: none;
+	stroke-width: 1.5;
+	stroke-dasharray: 30 30;
+	stroke-dashoffset: 30;
+	
+	transition: all 0.5s ease-in-out;
+}
+
+#first:checked ~ label,
+#second:checked ~ label,
+#third:checked ~ label,
+#forth:checked ~ label{ 
+	opacity: 0.5;
+}
+
+#first:checked ~ .check,
+#second:checked ~ .check,
+#third:checked ~ .check,
+#forth:checked ~ .check{ 
+	transform: scale(1.5);
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+#first:checked ~ svg,
+#second:checked ~ svg,
+#third:checked ~ svg,
+#forth:checked ~ svg{ 
+	stroke-dashoffset: 0;
+	transition: all 0.5s ease-in-out .5s;
+}
