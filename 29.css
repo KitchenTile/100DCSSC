@@ -1,0 +1,82 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #FFCE4E;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.search-bar{
+	box-sizing: border-box;
+	width: 260px;
+	height: 40px;
+	padding: 9px 30px 9px 15px;
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+	border: none;
+	outline: transparent;
+	font-size: 13px;
+	font-weight: 600;
+	color: #b19038;
+	
+	&::placeholder{
+		font-size: 13px;
+		color: #A6B9D2;
+		font-weight: 600;
+	}
+}
+
+
+.fa{
+	position: absolute;
+	top: 50%;
+	left: 90%;
+	transform: translateY(-50%);
+	color: #FFCE4E;
+}
+
+.search-result{
+	display: none;
+	
+	
+	&.active{
+	display: block;
+	position: absolute;
+	top: 42px;
+	background: white;
+	padding: 10px 0 10px 0;
+	margin: 0;
+	font-size: 13px;
+	width: 260px;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+	border-radius: 0 0 3px 3px;
+	}
+}
+
+li{
+	appearance: none;
+	list-style: none;
+	padding: 10px 15px;
+
+}
