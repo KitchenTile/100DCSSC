@@ -1,0 +1,76 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #1B2239;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+svg{
+	fill: none;
+	width: 400px;
+	stroke: white;
+	stroke-width: 2px;
+	stroke-dasharray: 70 810;
+	stroke-dashoffset: 75;
+	
+	animation: flow 5s linear;
+}
+
+.circle{
+	position: absolute;
+	top: 48%;
+	left: 27%;
+	width: 6.5px;
+	height: 6.5px;
+	background: transparent;
+	border: 1px white solid;
+	border-radius: 100%;
+	opacity: 0;
+	animation: grow 1s linear 1.1s forwards;
+	
+	&:nth-of-type(2){
+		top: 45%;
+		left: 50%;
+		animation: grow 1s linear 2.5s forwards;
+
+	}
+}
+
+@keyframes flow{
+	100%{
+		stroke-dashoffset: -800;
+	}
+}
+
+@keyframes grow{
+	30%{
+		opacity: 1;
+	}
+	100%{
+		scale: 2.4;
+		opacity: 0;
+	}
+}
