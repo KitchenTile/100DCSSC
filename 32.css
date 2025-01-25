@@ -1,0 +1,115 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+	background: rgb(203,89,33);
+	background: linear-gradient(45deg, rgba(203,89,33,1) 0%, rgba(255,180,42,1) 100%);  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.counter{
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+	width: 130px;
+	height: 40px;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.plus, .minus{
+	margin: 0 2px;
+	height: 90%;
+	width: 29%;
+	background: white;
+	cursor: pointer;
+	border-radius: 100%;
+	transition: all 0.3s ease-in-out;
+}
+
+.plus{
+	position: relative;
+
+	&:hover{
+		background: #95D26E;
+
+		& .horizontal-plus, .vertical-plus{
+			background: white;
+		}
+	}
+
+	& .horizontal-plus{
+		height: 2px;
+		width: 20px;
+		background: #95D26E;
+	}
+
+	& .vertical-plus{
+		width: 2px;
+		height: 20px;
+		background: #95D26E;
+	}
+}
+
+
+.minus{
+	position: relative;
+	color: #DA6D6C;
+
+	& .horizontal-minus{
+		height: 2px;
+		width: 20px;
+		background: #DA6D6C;
+	}
+	
+	&:hover{
+		background: #DA6D6C;
+		
+		& .horizontal-minus{
+			background: white;
+		}
+	}
+}
+
+.number{
+	width:34%;
+	height: 100%;	
+	text-align: center;
+	line-height: 40px;
+	font-weight: 600;
+	font-size: 22px;
+	color: #6D85A1;
+	
+	&.animate{
+		animation: fade-out 0.8s ease;
+	}
+}
+
+@keyframes fade-out{
+	100%{
+		opacity: 0;
+		scale: 1.5;
+	}
+}
