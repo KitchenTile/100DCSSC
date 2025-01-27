@@ -1,0 +1,87 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #EA4C89;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+svg{
+	stroke-dasharray: 270;
+	stroke-dashoffset: 0;
+	fill: none;
+	stroke: #EA4C89;
+	stroke-width: 12;
+	width: 224px;
+	height: 53px;
+	animation: fill 3.5s ease-in-out;
+	
+	&:nth-child(1){
+		fill: white;
+		animation: fill 2.5s ease-in-out both;
+		stroke-width: 12;
+	}
+	
+		&:nth-child(2){
+		animation: fill 2s ease-in-out both forwards;
+		stroke-width: 18;
+	}
+}
+
+.line{
+	position: absolute;
+	top: -20px;
+	left: 0;
+	width: 224px;
+	height: 4px;
+	background: white;
+  transform: scaleX(0);
+	transform-origin: 100%;
+	animation: scale 2s ease-in-out forwards;
+
+	
+	
+	&:nth-of-type(2){
+		top: 70px;
+		right: 0;
+		transform-origin: 0%;
+	}
+}
+
+@keyframes fill{
+	0%{
+			stroke-dashoffset: 0;
+	}
+	100%{
+			stroke-dashoffset: 270;
+	}
+}
+
+@keyframes scale{
+	0%{
+    transform: scaleX(0);	}
+	100%{
+    transform: scaleX(1);	}
+}
