@@ -1,0 +1,11 @@
+$(".line").bind("click", function() {	
+$(".option").toggleClass("active")
+														$(".line").toggleClass("active") 
+														$(".line").removeClass("origin") 
+
+})
+
+$(".option").bind("click", function() {	$(".option").toggleClass("active")
+														$(".line").toggleClass("active")
+
+})
