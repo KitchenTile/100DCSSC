@@ -1,0 +1,11 @@
+<div class="frame">
+  <div class="center">
+		<div class="menu-container">
+		<span class="line origin"></span><span class="line origin"></span>
+		<span class="option">Home</span>
+		<span class="option">Work</span>
+		<span class="option">Life</span>
+		<span class="option">Spirit</span>
+		</div>
+  </div>
+</div>
